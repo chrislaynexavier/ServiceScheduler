@@ -14,11 +14,11 @@ describe('User', () => {
       expect(newClient.name).toBe(name)
     })
 
-    it('should have a user with correct CPF', () => {
+    it('should have a client with correct CPF', () => {
       expect(newClient.CPF).toBe(CPF)
     })
       
-    it('should have a user with correct birthDate', () => {
+    it('should have a client with correct birthDate', () => {
       expect(newClient.birthDate).toBe(birthDate)
     })
 })
