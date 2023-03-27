@@ -1,2 +1,5 @@
-# ServiceScheduler
-System for registration clients and service providers and scheduling services
+# group-habits
+
+Node version: 16.18.0
+
+`yarn install`
