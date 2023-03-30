@@ -1,4 +1,4 @@
-# group-habits
+# Service-scheduler
 
 Node version: 16.18.0
 
