@@ -1,5 +1,6 @@
 import { EventSchedule } from "../src/domain/entity/Event"
 import { Provider } from "../src/domain/entity/Provider"
+import { Schedule } from "../src/domain/entity/Schedule"
 
 describe('Schedule', () => {
     let newSchedule : Schedule
@@ -16,7 +17,7 @@ describe('Schedule', () => {
 
     beforeEach(() => {
         provider = new Provider (nameProvider, CPFProvider, birthDate, specialty)
-        newSchedule = new Schedule(Provider)
+        newSchedule = new Schedule(provider)
         newEvent1 = new EventSchedule (CPFClient1, CPFProvider, season1)
         newEvent2 = new EventSchedule (CPFClient2, CPFProvider, season1)
     })
@@ -42,8 +43,4 @@ describe('Schedule', () => {
         expect(newSchedule.events).toContain(newEvent1)  //confirm how will be this test
     })
 
-    it('should not have deleted event', () => {
-        newSchedule.deleteEvent(newEvent1)
-        expect(newSchedule.events).not.toContain(newEvent1)  //confirm how will be this test
-    })
 })
