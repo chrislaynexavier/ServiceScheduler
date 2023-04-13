@@ -1,8 +1,8 @@
 
 import { Provider } from "../src/domain/entity/Provider"
 
-describe('User', () => {
-    let newProvider: Provider
+describe('Provider', () => {
+    let newProvider : Provider
     let name = "Mariana"
     let CPF = "000.000.000-08"
     let birthDate = new Date("02/29/2002")
