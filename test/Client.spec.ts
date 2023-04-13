@@ -1,7 +1,7 @@
 import { Client } from "../src/domain/entity/Client"
 
-describe('User', () => {
-    let newClient: Client
+describe('Client', () => {
+    let newClient : Client
     let name = "Chris"
     let CPF = "000.000.000-09"
     let birthDate = new Date("02/31/2000")
