@@ -13,12 +13,12 @@ describe('Schedule', () => {
     let season1 = new Date(2023,2,5,8,30)
     let newEvent2: EventSchedule
     let CPFClient2 = "000.000.000-01"
-    let season2 = new Date(2023,2,5,8,30)
 
     beforeEach(() => {
         provider = new Provider (nameProvider, CPFProvider, birthDate, specialty)
         newSchedule = new Schedule(Provider)
         newEvent1 = new EventSchedule (CPFClient1, CPFProvider, season1)
+        newEvent2 = new EventSchedule (CPFClient2, CPFProvider, season1)
     })
 
     it('should have a schedule with correct provider', () => {
@@ -42,4 +42,8 @@ describe('Schedule', () => {
         expect(newSchedule.events).toContain(newEvent1)  //confirm how will be this test
     })
 
+    it('should not have deleted event', () => {
+        newSchedule.deleteEvent(newEvent1)
+        expect(newSchedule.events).not.toContain(newEvent1)  //confirm how will be this test
+    })
 })
