@@ -9,7 +9,12 @@ export class Schedule {
         this.provider = provider
     }
 
-    addEvent(event: EventSchedule){
-        this.events.push(event)
+    addEvent(newEvent: EventSchedule){
+        const EqualEvent = this.events.find((event) => event.season === newEvent.season)
+        if(EqualEvent === undefined) {
+            this.events.push(newEvent)
+        }else{
+            return EqualEvent
+        }
     }
 }
