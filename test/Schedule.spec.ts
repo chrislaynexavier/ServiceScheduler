@@ -35,6 +35,7 @@ describe('Schedule', () => {
         newSchedule.addEvent(newEvent1)
         newSchedule.addEvent(newEvent2)
         expect(newSchedule.events).toContain(newEvent1)
+        expect(newSchedule.events).not.toContain(newEvent2)
     })
 
     it('should not have two equal events', () => {
