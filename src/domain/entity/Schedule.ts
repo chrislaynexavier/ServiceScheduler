@@ -11,7 +11,7 @@ export class Schedule {
 
     addEvent(newEvent: EventSchedule){
         const EqualEvent = this.events.find((event) => event.season === newEvent.season)
-        if(EqualEvent === undefined) {
+        if(!EqualEvent) {
             this.events.push(newEvent)
         }else{
             return EqualEvent

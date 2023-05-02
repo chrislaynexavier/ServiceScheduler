@@ -22,12 +22,12 @@ const connectDb = async () => {
 
 app.use(express.json())
 
-app.get('/habit', async (req: any, res: any) => {
+app.get('/client', async (req: any, res: any) => {
     let response = null
-    if (req.query.id_group) {
-        response = await client.query('select * from habits where id_group = $1', [req.query.id_group])
+    if (req.query.CPF) {
+        response = await client.query('select * from client where CPF_client = $1', [req.query.CPF])
     } else {
-        response = await client.query('select * from habits')
+        response = await client.query('select * from client')
     }
     res.json(response.rows)
     // await client.end()

@@ -1,0 +1,1 @@
+create table client (id serial primary key, CPF_client varchar not null, birth_date date not null);
